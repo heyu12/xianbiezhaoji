@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body,ul{margin:0;padding: 0;}
+    #ul{background: lemonchiffon;width: 308px;height: 306px;padding-top: 2px;position: relative;border: 4px soild #000;border-radius: 4px;margin: 20px auto;}
+    #ul li{width: 100px;height: 100px;background: pink;float: left;list-style-type: none;margin: 0 0 2px 2px;}
+    #ul li.active{background: lemonchiffon;}
+    </style>
+    
+    <script>
+        window.onload = function(){
+            let p1 = new Ping();
+            p1.init("ul",4);
+        }
+        function Ping(){
+            this.oUl = null;
+            this.ali = null;
+            this.len = 0;
+            this.oLi = null;
+        }
+        Ping.prototype.init = function(id,num){
+            this.oUl = document.querySelector(id);
+            this.oUl.innerHTML = this.sheng(num);
+            this.aLi = this.oUl.querySelectorALL("li");
+            this.len = thos.aLi.length;
+            this.oLi = this.aLi[this.len-1];
+            this.oLi.className = 'active';
+            this.ding();
+        }
+        Ping.prototype.ding = function(){
+            let arr1 = [];
+            for(let i = 0;i<this.len;i++){
+                arr1.push( [this.aLi[i].offsetLeft,this.aLi[i].offsetTop,i]);
+            }
+            for(let i = 0;i<this.len;i++){
+                this.aLi[i].style.position = "absolute";
+                this.aLi[i].style.left = arr[i][0] + "px";
+                this.aLi[i].style.top = arr[i][1] + "px";
+                this.aLi[i].index = arr[i][2];
+                thsi.aLi[i].style.margin = 0;
+            }
+        }
+        Ping.prototype.sheng = function(num){
+            this.oUl.style.width = 2 + num*2 + num*100 + "px";
+            this.oUl.style.height = num*2 + num*100 + "px";
+            let n = num*num;
+            let str = "";
+            for(let i = 0;i<n;i++){
+                str += "<li></li>";
+            }
+            return str;
+        }
+
+    </script>
+</head>
+<body>
+<ul id="ul">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="active"></li>
+</ul>   
+</body>
+</html>

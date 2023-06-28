@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shipintupian</title>
+    <style type="text/css">
+body{
+background-image:url("beijing.jpeg");
+background-repeat:no-repeat;
+background-size:1030px 640px;
+}
+        
+.view{
+margin-top:100px;
+text-align:center;
+}
+video{
+width:500px;
+}
+#shipin1{
+position: absolute;
+left: 30px;
+top: 7-px;
+
+}
+
+#dog1{
+translate: 550px -70px;
+
+}
+#jingyu1{
+
+translate: 580px 100px;
+
+}
+#haigui1{
+translate: 140px 260px;
+
+}
+#anniu{
+translate: 270px 320px;
+
+}
+
+.small_img,.big_img {
+cursor: pointer;
+} 
+.black_overlay{ 
+display: none; 
+position: absolute; 
+top: 0%; 
+left: 0%; 
+width: 100%; 
+height: 100%; 
+background-color: black; 
+z-index:1001; 
+-moz-opacity: 0.8; 
+opacity:.80; 
+filter: alpha(opacity=80);  
+} 
+.big_img { 
+display: none; 
+position: absolute; 
+width: 1060px;
+height: 660px;
+left:0%;
+top: 0%;
+margin: -20px 0px 0px -20px;
+z-index:1002; 
+overflow: auto; 
+}
+</style>
+
+
+</head>
+<body>
+    <div class="view">
+        <video id="shipin1" src="dongwu.mp4" width="100px" height="400px"
+            controls="controls"
+            poster="liulangmao.jpg">
+                
+        </video>
+    </div>
+    <div id="dongwumen">
+    <img id="dog1" src="dog1.jpg" width="200px" height="200px" onclick="document.getElementById('light1').style.display ='block';document.getElementById('fade').style.display='block'"/> 
+    <img id="light1" class="big_img" src ="dog1.jpg" onclick = "document.getElementById('light1').style.display ='none' ;document.getElementById('fade').style.display='none'"/>
+    <img id="jingyu1" src ="jingyu.jpg" width="200px" height="200px" onclick="document.getElementById('light2').style.display ='block';document.getElementById('fade').style.display='block'"/>
+
+    <img id="light2" class="big_img" src ="jingyu.jpg" onclick = "document.getElementById('light2').style.display ='none' ;document.getElementById('fade').style.display='none'"/>
+    
+    <img id="haigui1" src="haigui.jpg" width="200px" height="200px" onclick="document.getElementById('light3').style.display ='block';document.getElementById('fade').style.display='block'"/> 
+    <img id="light3" class="big_img" src ="haigui.jpg" onclick = "document.getElementById('light3').style.display ='none' ;document.getElementById('fade').style.display='none'"/>
+        <a href="xiaolu.html"><img id="anniu" src="./hhhh/anniu.png" width="100px" height="50px" /></a>
+        
+        </div>
+</body>
+</html>
